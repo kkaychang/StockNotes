@@ -17,6 +17,8 @@
 		685B58AA2640E15900B82257 /* ApiDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685B58A92640E15900B82257 /* ApiDataHelper.swift */; };
 		685B58AD2640E24F00B82257 /* StockSimpleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685B58AC2640E24F00B82257 /* StockSimpleInfo.swift */; };
 		685B58B32641237B00B82257 /* IndustryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685B58B22641237A00B82257 /* IndustryType.swift */; };
+		685B590126426D3D00B82257 /* StockIndustryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685B58FF26426D3D00B82257 /* StockIndustryCell.swift */; };
+		685B590226426D3D00B82257 /* StockIndustryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 685B590026426D3D00B82257 /* StockIndustryCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		685B58A92640E15900B82257 /* ApiDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataHelper.swift; sourceTree = "<group>"; };
 		685B58AC2640E24F00B82257 /* StockSimpleInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSimpleInfo.swift; sourceTree = "<group>"; };
 		685B58B22641237A00B82257 /* IndustryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndustryType.swift; sourceTree = "<group>"; };
+		685B58FF26426D3D00B82257 /* StockIndustryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockIndustryCell.swift; sourceTree = "<group>"; };
+		685B590026426D3D00B82257 /* StockIndustryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StockIndustryCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				685B589E263FF5AB00B82257 /* StockNotesMainViewController.swift */,
+				685B58FF26426D3D00B82257 /* StockIndustryCell.swift */,
+				685B590026426D3D00B82257 /* StockIndustryCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -184,6 +190,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				685B590226426D3D00B82257 /* StockIndustryCell.xib in Resources */,
 				685B5895263FF56D00B82257 /* LaunchScreen.storyboard in Resources */,
 				685B5892263FF56D00B82257 /* Assets.xcassets in Resources */,
 				685B5890263FF56700B82257 /* Main.storyboard in Resources */,
@@ -197,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				685B590126426D3D00B82257 /* StockIndustryCell.swift in Sources */,
 				685B58AD2640E24F00B82257 /* StockSimpleInfo.swift in Sources */,
 				685B58B32641237B00B82257 /* IndustryType.swift in Sources */,
 				685B5889263FF56700B82257 /* AppDelegate.swift in Sources */,

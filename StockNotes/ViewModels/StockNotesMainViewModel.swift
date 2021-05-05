@@ -9,10 +9,11 @@ import Foundation
 
 class StockNotesMainViewModel {
 
+    private(set) var sortedIndustryList: [IndustryType] = []
     private(set) var stockSimpleList: [StockSimpleInfo] = []
 
     init() {
-
+        getUserSortIndustryList()
     }
 
 }
@@ -35,5 +36,32 @@ extension StockNotesMainViewModel {
         } errorHandler: { (error) in
             errorHandler("取得上市清單錯誤")
         }
+    }
+
+    /// 取得用戶排序股票類別清單(有預設值)
+    func getUserSortIndustryList() -> [IndustryType] {
+        sortedIndustryList = UserDefaults.standard.array(forKey: "UserSortIndustryList") as? [IndustryType] ?? getDefaultIndustryList()
+        return sortedIndustryList
+    }
+
+    /// 儲存用戶排序股票類別清單
+    func saveUserSortedIndustryList(sortedList: [IndustryType]) {
+        UserDefaults.standard.set(sortedList, forKey: "UserSortIndustryList")
+    }
+
+    /// 更新用戶排序股票類別清單
+    func updateUserSortedIndustryList(currentIndex: Int, updateIndex: Int) {
+        var updateList = sortedIndustryList
+        let updateItem = sortedIndustryList[currentIndex]
+        updateList.remove(at: currentIndex)
+        updateList.insert(updateItem, at: updateIndex)
+        sortedIndustryList = updateList
+        saveUserSortedIndustryList(sortedList: sortedIndustryList)
+    }
+}
+
+private extension StockNotesMainViewModel {
+    func getDefaultIndustryList() -> [IndustryType] {
+        return IndustryType.allCases.filter { $0 != .unknown }
     }
 }

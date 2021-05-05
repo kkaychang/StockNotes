@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StockIndustryCell" id="gTV-IL-0wX" customClass="StockIndustryCell" customModule="StockNotes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gDG-UB-RHC">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8X7-Wk-uF1">
+                                <rect key="frame" x="5" y="61" width="140" height="28"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="8X7-Wk-uF1" firstAttribute="centerX" secondItem="gDG-UB-RHC" secondAttribute="centerX" id="NNg-Di-IXp"/>
+                            <constraint firstItem="8X7-Wk-uF1" firstAttribute="centerY" secondItem="gDG-UB-RHC" secondAttribute="centerY" id="VZo-0X-pWn"/>
+                            <constraint firstAttribute="trailing" secondItem="8X7-Wk-uF1" secondAttribute="trailing" constant="5" id="YoH-oT-Re0"/>
+                            <constraint firstItem="8X7-Wk-uF1" firstAttribute="leading" secondItem="gDG-UB-RHC" secondAttribute="leading" constant="5" id="lco-0h-9ph"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="gDG-UB-RHC" secondAttribute="trailing" id="CRE-js-BiF"/>
+                <constraint firstAttribute="bottom" secondItem="gDG-UB-RHC" secondAttribute="bottom" id="aid-BS-Lgn"/>
+                <constraint firstItem="gDG-UB-RHC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="jxL-5E-d1j"/>
+                <constraint firstItem="gDG-UB-RHC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="qGR-zV-fWA"/>
+            </constraints>
+            <connections>
+                <outlet property="industryNameLabel" destination="8X7-Wk-uF1" id="wEj-GN-BLm"/>
+            </connections>
+            <point key="canvasLocation" x="-168" y="87"/>
+        </collectionViewCell>
+    </objects>
+</document>
